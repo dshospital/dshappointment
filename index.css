@@ -19,6 +19,7 @@ body {
   margin: auto;
 }
 
+/* Header */
 header.main-header {
   background-color: #fff;
   border-bottom: 1px solid #eee;
@@ -48,10 +49,16 @@ nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: #b60000;
+}
+
+/* Hero Section */
 .hero-section {
-  background: url('hero-image.jpg') no-repeat center center/cover;
+  background: url('https://images.unsplash.com/photo-1588776814546-cb3762f3e0c5') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -65,23 +72,25 @@ nav a {
   padding: 2rem;
   border-radius: 10px;
   max-width: 500px;
+  width: 90%;
 }
 
 .hero-text h1 {
   color: #b60000;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .hero-text p {
   color: #007BFF;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .appointment-form h2 {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #333;
 }
 
 .appointment-form input,
@@ -99,20 +108,17 @@ nav a {
   background-color: #b60000;
   color: #fff;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.appointment-form button:hover {
+  background-color: #a00000;
+}
+
+/* Features */
 .features {
   background-color: #f8f8f8;
   padding: 2rem 0;
-}
-
-.features .feature {
-  background-color: #d9534f;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  flex: 1;
 }
 
 .features .container {
@@ -122,6 +128,22 @@ nav a {
   justify-content: space-between;
 }
 
+.features .feature {
+  background-color: #d9534f;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.features .feature:hover {
+  transform: scale(1.05);
+}
+
+/* Intro Section */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -134,11 +156,30 @@ nav a {
   flex: 1 1 50%;
 }
 
+.intro .text h2 {
+  margin-bottom: 1rem;
+  color: #b60000;
+}
+
+.intro .text p {
+  margin-bottom: 1rem;
+}
+
+.intro .text button {
+  background-color: #b60000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .intro .image img {
   max-width: 100%;
   border-radius: 10px;
 }
 
+/* Specialties */
 .specialties {
   background-color: #f1f1f1;
   padding: 2rem 0;
@@ -161,6 +202,17 @@ nav a {
   min-width: 150px;
 }
 
+.specialties button {
+  margin-top: 1.5rem;
+  background-color: #007BFF;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Stats */
 .stats {
   background-color: #b60000;
   color: #fff;
@@ -175,6 +227,7 @@ nav a {
   border-radius: 10px;
 }
 
+/* Testimonials */
 .testimonials {
   background-color: #fff;
   padding: 2rem 0;
@@ -187,8 +240,10 @@ nav a {
   padding: 1rem;
   border-radius: 10px;
   max-width: 600px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
+/* Footer */
 footer {
   background-color: #f5f5f5;
   text-align: center;
@@ -205,6 +260,11 @@ footer button {
   cursor: pointer;
 }
 
+footer p {
+  margin-top: 1rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -214,5 +274,10 @@ footer button {
   .intro,
   .features .container {
     flex-direction: column;
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 3rem 0;
   }
 }
